@@ -1,6 +1,8 @@
 # RSQLite.toolkit-tests
 Repository for datasets used in testing and in vignettes of RSQLite.toolkit package
 
+----
+
 ## DOSE - Global dataset of reported subnational economic output
 
 ### Source
@@ -11,6 +13,7 @@ Repository for datasets used in testing and in vignettes of RSQLite.toolkit pack
 
 ### Description
 This dataset is taken from:
+
 Kotz, M., Levermann, A. & Wenz, L. The economic commitment of climate change. 
 [Nature 628, 551-557](https://rdcu.be/ehsYP) (2024). https://doi.org/10.1038/s41586-024-07219-0
 
@@ -28,10 +31,12 @@ DOSE v2 contains harmonised data on reported economic output for:
 
 ### Citation
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.14536105.svg)](https://doi.org/10.5281/zenodo.14536105)
+
 Wenz, L., Kotz, M., Kalkuhl, M., Carr, R., Kogel, N., Giesen, C., Reckwitz, A., Wedemeyer, 
 J., & Ziegler, K. (2024). DOSE - Global dataset of reported subnational economic output 
 [Data set]. Zenodo. https://doi.org/10.5281/zenodo.14536105
 
+----
 
 ## Comune di Roma - Public Transport Data (GTFS)
 
