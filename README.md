@@ -5,6 +5,9 @@ Repository for datasets used in testing and in vignettes of RSQLite.toolkit pack
 
 ## DOSE - Global dataset of reported subnational economic output
 
+### Assets
+- File name: `14536105.zip`
+
 ### Source
 - Last retrieved release: Version v5 Dec 20, 2024
 - Web page: [zenodo.org](https://zenodo.org/records/14536105)
@@ -38,7 +41,31 @@ J., & Ziegler, K. (2024). DOSE - Global dataset of reported subnational economic
 
 ----
 
+## Italian Ministry of Economy and Finance (MEF) 
+
+### Assets
+- File name: `IT_INCOME_TAX_BY_MUNICIPALITY.zip`
+- File name: `IT_INCOME_TAX_BY_AGE.zip`
+
+### Source
+- Last retrieved release: 2025-04-21T09:30
+- Web page: [MEF - Statistics and Data](https://www.finanze.gov.it/it/statistiche-fiscali/)
+- Queries on source: 
+  - [Personal Income Tax forms: summary data by municipality](https://www1.finanze.gov.it/finanze/analisi_stat/public/index.php?search_class%5b0%5d=cCOMUNE&opendata=yes)
+  - [Personal Income Tax forms: summary data by age cluster](https://www1.finanze.gov.it/finanze/analisi_stat/public/index.php?search_class%5B0%5D=cETA&opendata=yes)
+
+### Description
+These datasets contain aggregated data from Personal Income Tax forms filled by Italian individuals. 
+Data is published annualy in aggregated form by the Italian Ministry of Economy and Finance. The data sets
+include annual data (one year per file) from 2000 to 2023 for data aggragated by municipality, from 2019 to
+2024 for data aggregated by age and income class.
+
+----
+
 ## Comune di Roma - Public Transport Data (GTFS)
+
+### Assets
+- File name: `rome_static_gtfs.zip`
 
 ### Source
 - Last retrieved release: 2025-04-12T11:51
@@ -49,3 +76,4 @@ J., & Ziegler, K. (2024). DOSE - Global dataset of reported subnational economic
 ### Description
 Representation of Rome public transport in GTFS format. Scheduled service.
 Technical documentation describing the data format is available from [gtfs.org](https://gtfs.org/).
+
