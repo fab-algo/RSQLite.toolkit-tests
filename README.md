@@ -6,7 +6,7 @@ Repository for datasets used in testing and in vignettes of RSQLite.toolkit pack
 ## DOSE - Global dataset of reported subnational economic output
 
 ### Assets
-- File name: ```14536105.zip```
+- File name: `14536105.zip`
 
 ### Source
 - Last retrieved release: Version v5 Dec 20, 2024
