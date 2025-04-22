@@ -6,13 +6,12 @@ Repository for datasets used in testing and in vignettes of RSQLite.toolkit pack
 ## DOSE - Global dataset of reported subnational economic output
 
 ### Assets
-- File name: `14536105.zip`
+- File name in repository: `14536105.zip`
 
 ### Source
 - Last retrieved release: Version v5 Dec 20, 2024
 - Web page: [zenodo.org](https://zenodo.org/records/14536105)
 - Other source: [doi.org](https://doi.org/10.5281/zenodo.14536105)
-- File name in repository: `14536105.zip`
 
 ### Description
 This dataset is taken from:
@@ -44,8 +43,8 @@ J., & Ziegler, K. (2024). DOSE - Global dataset of reported subnational economic
 ## Italian Ministry of Economy and Finance (MEF) 
 
 ### Assets
-- File name: `IT_INCOME_TAX_BY_MUNICIPALITY.zip`
-- File name: `IT_INCOME_TAX_BY_AGE.zip`
+- File name in repository: `IT_INCOME_TAX_BY_MUNICIPALITY.zip`
+- File name in repository: `IT_INCOME_TAX_BY_AGE.zip`
 
 ### Source
 - Last retrieved release: 2025-04-21T09:30
@@ -65,13 +64,12 @@ include annual data (one year per file) from 2000 to 2023 for data aggragated by
 ## Comune di Roma - Public Transport Data (GTFS)
 
 ### Assets
-- File name: `rome_static_gtfs.zip`
+- File name in repository: `rome_static_gtfs.zip`
 
 ### Source
 - Last retrieved release: 2025-04-12T11:51
 - Web page: [dati.comune.roma.it](https://dati.comune.roma.it/catalog/dataset/c_h501-d-9000)
 - Other source: [dati.gov.it](https://www.dati.gov.it/view-dataset/dataset?id=e7ed4798-e78b-4922-8af9-aa7e23297a10)
-- File name in repository: `rome_static_gtfs.zip`
 
 ### Description
 Representation of Rome public transport in GTFS format. Scheduled service.
