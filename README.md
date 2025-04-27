@@ -61,6 +61,26 @@ include annual data (one year per file) from 2000 to 2023 for data aggragated by
 
 ----
 
+## ISTAT - Italian National Institute of Statistics
+
+### Assets
+- File name in repository: `ISTAT-Altitudini_comuni_DEM.zip`
+- File name in repository: `ISTAT-Classificazioni-statistiche-Anni_2024-2025.zip`
+- File name in repository: `ISTAT-fasce_altim_com_2011_2023.zip`
+- File name in repository: `ISTAT-Superfici-delle-unità-amministrative-Dati-comunali-e-provinciali.zip`
+
+### Source
+- Last retrieved release: 2025-04-27T09:45
+- Web page: [ISTAT / Classification - geographical statistics on municipalities](https://www.istat.it/classificazione/principali-statistiche-geografiche-sui-comuni/)
+
+### Description
+For the purpose of a statistical description of the geographical characteristics of the territory, 
+Istat disseminates elaborations based on data collected during census surveys or from other sources
+(e.g. Digital Elevation Model - DEM) with reference to the main territorial units of interest 
+for official statistics.
+
+----
+
 ## Comune di Roma - Public Transport Data (GTFS)
 
 ### Assets
