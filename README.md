@@ -6,7 +6,7 @@ Repository for datasets used in testing and in vignettes of RSQLite.toolkit pack
 ## DOSE - Global dataset of reported subnational economic output
 
 ### Assets
-- File name in repository: `14536105.zip`
+- File name in repository: `DOSE_V2.10.zip`
 
 ### Source
 - Last retrieved release: Version v5 Dec 20, 2024
@@ -64,10 +64,7 @@ include annual data (one year per file) from 2000 to 2023 for data aggragated by
 ## ISTAT - Italian National Institute of Statistics
 
 ### Assets
-- File name in repository: `ISTAT-Altitudini_comuni_DEM.zip`
-- File name in repository: `ISTAT-Classificazioni-statistiche-Anni_2024-2025.zip`
-- File name in repository: `ISTAT-fasce_altim_com_2011_2023.zip`
-- File name in repository: `ISTAT-Superfici-delle-unità-amministrative-Dati-comunali-e-provinciali.zip`
+- File name in repository: `ISTAT_Municipalities_Classification.zip`
 
 ### Source
 - Last retrieved release: 2025-04-27T09:45
@@ -84,7 +81,7 @@ for official statistics.
 ## Comune di Roma - Public Transport Data (GTFS)
 
 ### Assets
-- File name in repository: `rome_static_gtfs.zip`
+- File name in repository: `ROME_STATIC_GTFS.zip`
 
 ### Source
 - Last retrieved release: 2025-04-12T11:51
