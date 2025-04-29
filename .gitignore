@@ -50,3 +50,5 @@ rsconnect/
 
 # piggyback assets
 assets/
+data/
+

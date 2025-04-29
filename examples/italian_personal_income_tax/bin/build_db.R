@@ -8,6 +8,10 @@ pb_download(file="IT_INCOME_TAX_BY_AGE.zip", dest=data_path,
             repo="fab-algo/RSQLite.toolkit-tests")
 unzip(zipfile=file.path(data_path, "IT_INCOME_TAX_BY_AGE.zip"), exdir=data_path)
 
+in_files <- dir(path = file.path(data_path, "IT_INCOME_TAX_BY_AGE"),
+                pattern = "cla_anno_tipo_reddito_[0-9]{4}\\.csv")
+
+## ------------------------------------------
 data_file <- file.path(data_path, "IT_INCOME_TAX_BY_AGE",
                        "cla_anno_tipo_reddito_2024.csv")
 
@@ -51,27 +55,34 @@ schema$sql_types <- new_sql
 
 
 ## -----------------------------------------
-dbcon <- dbConnect(dbDriver("SQLite"), file.path(data_path, "test.sqlite"))
+dbcon <- dbConnect(dbDriver("SQLite"),
+                   file.path(db_path, "IT_INCOME_TAX.sqlite"))
 
+years <- as.integer(substr(x=in_files, start=23, stop=27))
 table_name <- "INCOME_TAX_BY_AGE"
 
+for (ii in 2:length(in_files)) {
+    if (ii == 2) {
+        drop_t <- TRUE
+    } else {
+        drop_t <- FALSE
+    }
+    cv <- data.frame(TAX_YEAR = c(years[ii]),
+                     INCOME_YEAR = c(years[ii]-1))
+    
+    dbTableFromDSV(input_file=data_file, dbcon=dbcon, table_name=table_name,
+                   header=TRUE, sep=";", dec=",", grp=".",
+                   col_names=schema$col_names,
+                   col_types=schema$col_types,
+                   drop_table=drop_t,
+                   constant_values = cv
+                   )
+}
 
 df <- data.frame(table_name=table_name, schema)
 dbTableFromDataFrame(df=df, dbcon=dbcon, table_name="TABLE_SCHEMA",
                      drop_table=TRUE, build_pk=TRUE,
                      pk_fields=c("table_name", "col_names"))
-
-in_files <- dir(path=data_path, pattern="cla_anno_tipo_reddito_.*(\.csv)$")
-
-years <- as.integer(substr(x=in_files, start=22, stop=26))
-
-
-dbTableFromDSV(input_file=data_file, dbcon=dbcon, table_name=table_name,
-               header=TRUE, sep=";", dec=",", grp=".",
-               col_names=schema$col_names,
-               col_types=schema$col_types,
-               drop_table=TRUE)
-
 
 dbDisconnect(dbcon)
 
