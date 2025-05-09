@@ -8,17 +8,15 @@ in_files <- dir(path = file.path(data_path, "IT_INCOME_TAX_BY_MUNICIPALITY"),
 f_encodings <- c(rep("ISO_8859-1", times=6), 
                  rep("US-ASCII", times=18))
 
-ii<-23
+ii<-1
 data_file <- file.path(data_path, "IT_INCOME_TAX_BY_MUNICIPALITY",
                        in_files[ii])
 
 fschema <- file_schema_dsv(input_file=data_file,
                            header=TRUE, sep=";", dec=",", grp=".",
                            null_columns=TRUE, comment.char="",
-                           quote="", na.strings="", fileEncoding=f_encodings[ii])
-
-traceback()
-
+                           quote="", na.strings="",
+                           fileEncoding=f_encodings[ii])
 
 
 input_file <- data_file
@@ -34,10 +32,13 @@ fill <- TRUE
 max_lines <- 100                         
 id_quote_method <- "DB_NAMES"
 
-raw_names <- scan(file = input_file,
+fcon <- file(input_file, "r", blocking = FALSE)
+raw_names <- scan(file = fcon,
                   nlines = 1,
                   sep = sep,
                   what = "character",
+                  fill = TRUE,
+                  multi.line = FALSE,
                   strip.white = TRUE,
                   quiet = TRUE,
                   quote = quote,
@@ -45,6 +46,7 @@ raw_names <- scan(file = input_file,
                   comment.char = comment.char,
                   fileEncoding = f_encodings[ii]
                   )
+close(fcon)
 
 if (header) {
     src_names <- raw_names    
@@ -80,3 +82,31 @@ df <- utils::read.table(
 
     
     col_types <- vapply(df, function(col) class(col)[1], character(1))
+
+
+
+
+
+gg <- function (y, ...) {
+    lpar <- eval(substitute(alist(...)))
+
+    if (!("from" %in% names(lpar))) {
+        lpar$from <- "latin1"
+        from <- "latin1"
+    } else {
+        from <- lpar$from
+    }
+
+    if (from == "ASCII")
+        print(from)
+
+    lpar1 <- append(x=lpar, values=list(x=y), after=0)
+    print(lpar1)
+
+    do.call(iconv, lpar1)
+}
+
+
+
+
+
