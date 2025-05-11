@@ -8,13 +8,15 @@ in_files <- dir(path = file.path(data_path, "IT_INCOME_TAX_BY_MUNICIPALITY"),
 f_encodings <- c(rep("ISO_8859-1", times=6), 
                  rep("US-ASCII", times=18))
 
-ii<-1
+ii<-21
 data_file <- file.path(data_path, "IT_INCOME_TAX_BY_MUNICIPALITY",
                        in_files[ii])
 
 fschema <- file_schema_dsv(input_file=data_file,
                            header=TRUE, sep=";", dec=",", grp=".",
-                           null_columns=TRUE, comment.char="",
+                           null_columns=TRUE,
+                           force_num_cols=TRUE,
+                           comment.char="",
                            quote="", na.strings="",
                            fileEncoding=f_encodings[ii])
 
@@ -24,13 +26,21 @@ header <- TRUE
 sep <- ";"
 dec <- ","
 grp <- ""
-skip <- 0
-quote <- ""
-na.strings <- ""
-comment.char <- ""
-fill <- TRUE
-max_lines <- 100                         
+max_lines <- 300                         
 id_quote_method <- "DB_NAMES"
+
+lpar <- list(
+    skip = 0,
+    quote = "",
+    na.strings = "",
+    comment.char = "",
+    fill = TRUE,
+    fileEncoding = "US-ASCII")
+
+
+
+
+
 
 fcon <- file(input_file, "r", blocking = FALSE)
 raw_names <- scan(file = fcon,
