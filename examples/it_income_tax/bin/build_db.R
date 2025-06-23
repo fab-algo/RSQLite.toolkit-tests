@@ -88,25 +88,50 @@ col_names <- data.frame(col_names,
 for (ii in 1:length(in_files)) {
     cur_names <- schemas[[ii]]$schema$col_names
     idx <- which(col_names$col_names %in% cur_names)
-    col_names[idx, ii+1] <- 1
+    col_names[idx, ii+1] <- match(col_names$col_names[idx], cur_names)
 }
 
 library(openxlsx2)
 write_xlsx(x = col_names,
-           file = file.path("./data/wrk/",
+           file = file.path("./examples/it_income_tax/wrk/",
                             paste0(table_name, "_col_names.xlsx")
-                            )
+                            ),
+           sheet = "col_names"
            )
 
 
+## ------------------------------------------
+R2SQL_types <- function(x) {
+    r2sql_dict <- c("character"= "TEXT",
+                    "double"   = "REAL",
+                    "integer"  = "INTEGER",
+                    "logical"  = "INTEGER",
+                    "numeric"  = "REAL",
+                    "Date"     = "DATE",
+                    "double_grouped"   = "REAL",
+                    "integer_grouped"  = "INTEGER",
+                    "numeric_grouped"  = "REAL")
+    
+    y <- r2sql_dict[x]
+    y[which(is.na(y))] <- "TEXT"
 
+    y    
+}
 
+data_file <- file.path("examples/it_income_tax/wrk/", 
+                       "INCOME_TAX_BY_MUNICIPALITY_col_names_map.xlsx")
 
+map <- wb_to_df(file = data_file, sheet = "col_names_map",
+                start_row = 1, cols = 1:4, 
+                col_names = TRUE, row_names = FALSE) 
 
+tbl_def <- unique(map[, c("tgt_col_name", "col_type", "col_order")])
+tbl_def <- tbl_def[order(tbl_def$col_order), ]
 
-
-
-
+tbl_def <- data.frame(col_names = tbl_def$tgt_col_name,
+                      col_types = tbl_def$col_type,
+                      sql_types = R2SQL_types(tbl_def$col_type),
+                      stringsAsFactors=FALSE, row.names = NULL)
 
 
 
