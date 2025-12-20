@@ -92,3 +92,30 @@ for official statistics.
 Representation of Rome public transport in GTFS format. Scheduled service.
 Technical documentation describing the data format is available from [gtfs.org](https://gtfs.org/).
 
+----
+
+## Bibliometric Dataset of Blockchain Research in the Banking Sector (2015–2025)
+
+### Assets
+- File name in repository: `Blockchain_Banking_Scopus_Dataset_2015_2025.zip`
+
+### Source
+- Last retrieved release: Published December 19, 2025 | Version v1
+- Web page: [zenodo.org](https://zenodo.org/records/17992285)
+- Other source: [doi.org](https://doi.org/10.5281/zenodo.17992284)
+
+### Description
+This repository contains the Scopus CSV dataset used in the bibliometric and
+thematic analysis for the study “Mapping the Intellectual Landscape of
+Blockchain in the Banking Industry (2015–2025)”.
+
+The dataset was retrieved from the Scopus database on May 12, 2025 using the
+search query: TITLE-ABS-KEY (Blockchain AND Banking).
+
+The dataset was used for bibliometric mapping and network visualization using VOSviewer.
+
+### Citation
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.17992285.svg)](https://doi.org/10.5281/zenodo.17992285)
+
+Aladeeb, Sadeq (Researcher) (2025). DBibliometric Dataset of Blockchain Research in the Banking Sector (2015–2025)
+[Data set]. Zenodo. https://zenodo.org/records/17992285
