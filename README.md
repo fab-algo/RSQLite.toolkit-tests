@@ -117,5 +117,5 @@ The dataset was used for bibliometric mapping and network visualization using VO
 ### Citation
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.17992285.svg)](https://doi.org/10.5281/zenodo.17992285)
 
-Aladeeb, Sadeq (Researcher) (2025). DBibliometric Dataset of Blockchain Research in the Banking Sector (2015–2025)
+Aladeeb, Sadeq (Researcher) (2025). Bibliometric Dataset of Blockchain Research in the Banking Sector (2015–2025)
 [Data set]. Zenodo. https://zenodo.org/records/17992285
